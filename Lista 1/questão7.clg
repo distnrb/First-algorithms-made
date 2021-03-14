@@ -1,0 +1,48 @@
+algoritmo funcionario;
+// Síntese
+//  Objetivo: Escreva um programa que leia o nome do funcionário, o sexo (F ou M), o número de matrícula do funcionário,
+// o número de horas trabalhadas, o valor que recebe por hora e calcule o salário desse funcionário. A seguir, mostre 
+//todos os dados na tela, os dados de entrada e os dados de saída 
+//  Entrada : nome do funcionário, sexo, nº de matrícula, nº de horas trabalhadas
+//  Saída   : salário e dados
+
+
+principal
+	// Declarações
+	texto nome, sexo;
+	inteiro nMatricula, nHoras, nDias;
+	real gHora, salario;
+
+	// Instruções
+	//Coleta de Nome, Sexo, Matrícula
+	escreval (" - Qual é o seu nome?");
+	leia (nome);
+	escreval (" - Qual o seu sexo? [F para Feminino, M para Masculino]");
+	leia (sexo);
+	escreval (" - Informe o nº da sua Matrícula:");
+	leia (nMatricula);
+	//Coleta de dados para calcular o salário
+	escreval ("-----------------------------------------------------------------");
+	escreval ("");
+	escreval (" - Quantos dias você trabalha por mês?");
+	leia (nDias);
+	//Limitando a quantia de dias para 30
+	se (nDias > 30) entao nDias = 30; fimSe
+	escreval (" - Quantas horas você trabalha por dia?");
+	leia (nHoras);
+	//Limitando a quantia de horas para 24
+	se (nHoras > 24) entao nHoras = 24; fimSe
+	escreval (" - Qual valor é remunerado por hora?");
+	leia (gHora);
+	//Cálculo do salário
+	salario = gHora * nHoras * nDias;
+	//Todos os dados
+	escreval ("-----------------------------------------------------------------");
+	escreval ("");
+	escreval (" Nome: ", nome);
+	escreval (" Sexo: ", sexo);
+	escreval (" Nº da Matrícula: ", nMatricula);
+	escreval (" Salário: ", salario," R$");
+	escreval ("");
+	escreval ("-----------------------------------------------------------------");
+fimPrincipal

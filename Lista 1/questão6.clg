@@ -1,0 +1,55 @@
+algoritmo mediaPonderadaAluno;
+// Síntese
+//  Objetivo:  Leia 2 valores A e B, que correspondem a 2 notas de um aluno. A seguir, calcule a média do aluno,
+// sabendo que a nota A tem peso 3.5 e a nota B tem peso 7.5 (A soma dos pesos portanto é 11). Assuma que cada
+//nota pode ir de 0 até 10.0
+//  Entrada : notaA e notaB
+//  Saída   : média ponderada das notas
+
+
+principal
+	// Declarações
+	real notaA, notaB, medP;
+
+	// Instruções
+	//inserir as notas
+	escreva ("insira o valor da nota A: ");
+	leia (notaA);
+	//nota > 10
+	se (notaA > 10) entao
+		escreval ("nota alterada para o valor máximo permitido: 10");
+		notaA = 10;
+		escreva ("insira o valor da nota B: ");
+	senao
+		escreva ("insira o valor da nota B: ");
+	fimSe
+	//nota < 0
+	se (notaA < 0) entao
+		escreval ("nota alterada para o valor mínimo permitido: 0");
+		notaA = 0;
+		escreva ("insira o valor da nota B: ");
+	senao
+		escreva ("insira o valor da nota B: ");
+	fimSe
+	leia (notaB);
+	//nota > 10
+	se (notaB > 10) entao
+		escreval ("nota alterada para o valor máximo permitido: 10");
+		notaB = 10;
+	senao
+		escreva ("");
+	fimSe
+	//nota < 10
+	se (notaB < 0) entao
+		escreval ("nota alterada para o valor mínimo permitido: 0");
+		notaB = 0;
+	senao
+		escreva ("");
+	fimSe
+	//calcular e mostrar a média
+	medP = (notaA*3.5+notaB*7.5)/11;
+	escreval ("");
+	escreva ("a média do aluno é: ", medP);
+
+
+fimPrincipal

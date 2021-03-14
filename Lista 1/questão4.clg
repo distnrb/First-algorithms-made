@@ -1,0 +1,25 @@
+algoritmo restoEquociente;
+// Síntese
+//  Objetivo:Construa um algoritmo que a partir da leitura de dois números
+//forneça o resto e o quociente da divisão do primeiro pelo segundo número.  
+//  Entrada :num1 num2
+//  Saída   :resto, quociente
+
+
+principal
+	// Declarações
+	inteiro num1, num2;
+
+	// Instruções
+	//perguntar os 2 valores
+	escreva ("digite o dividendo: ");
+	leia (num1);
+	escreva ("digite o divisor: ");
+	leia (num2);
+	//fazer a divisão para fornecer o resto e o quociente
+	escreval ("");
+	escreval ("o valor do quociente é: ", num1\num2);
+	escreval ("o valor do resto é: ", num1 mod num2);
+	
+
+fimPrincipal
